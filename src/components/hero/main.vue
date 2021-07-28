@@ -1,33 +1,32 @@
 <template>
-  <div>
-    A
-  </div>
-  <!--
-  <div
-    :class="[
-      'container fade-animate',
-      { 'is-active': !loading }
-    ]">
-    <h1 :id="idElement">
+  <div class="flex flex-column justify-center hfit text">
+    <h1 class="font-xl">
       {{ profiles.name }}
     </h1>
-    <p>
+
+    <p class="font-lg">
       {{ wordOne }}
-      <span>{{ typer }}</span><span
-      :class="['typed-cursor', { 'typed-cursor--blink': activeBlink }]">|</span>
+      <span class="primary ml-sm">{{ typer }}</span>
+      <span
+        :class="[
+          'primary',
+          'typed-cursor',
+          { 'typed-cursor--blink': activeBlink }]">
+          |
+      </span>
     </p>
 
-    <div class="social-media relative z-1">
+    <div class="my-lg">
       <a
         v-for="(social, n) in profiles.socials_media"
         :key="n"
         :href="social.link"
+        class="font-lg"
         @click.stop.prevent="goTo(social.link)">
         <svg-icon :name="social.icon"/>
       </a>
     </div>
   </div>
-  -->
 </template>
 <script>
 export { default } from './main.controller'

@@ -1,10 +1,8 @@
 <template>
   <transition name="slide-fade">
-    <div
-      v-if="!loading"
-      class="container relative z-1 mt-56">
-      <div class="text-center">
-        <h3>{{ profiles.name }}</h3>
+    <div v-if="!loading" class="text mb-lg">
+      <div class="text-center mt-lg mb-md">
+        <h3 class="font-2lg">{{ profiles.name }}</h3>
       </div>
       <div class="social-links">
         <a
@@ -13,7 +11,7 @@
           :href="social.link"
           :title="social.name"
           @click.stop.prevent="goTo(social.link)">
-          <svg-icon :icon-class="social.icon"/>
+          <svg-icon :name="social.icon"/>
         </a>
       </div>
       <div class="copyright text-center">

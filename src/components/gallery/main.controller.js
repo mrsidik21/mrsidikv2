@@ -31,12 +31,12 @@ export default {
     closingModal() {
       this.show = false
       this.detail = null
-      this.$parent.$parent.$el.style.overflowY = ''
+      document.getElementById('content').style.overflowY = ''
     },
     showingModal(data) {
       this.detail = data
       this.show = true
-      this.$parent.$parent.$el.style.overflowY = 'hidden'
+      document.getElementById('content').style.overflowY = 'hidden'
     },
     delay (time) {
       return new Promise((resolve) => {

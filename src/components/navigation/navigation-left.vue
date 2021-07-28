@@ -8,12 +8,17 @@
       <a
         v-for="(menu, n) in menus"
         :key="n"
-        class="menu-item">
-        <div class="icon">
-          {{ n }}
+        :href="menu.link"
+        :class="[
+          'menu-item',
+          { 'is-active white': menu.link === menuActive }
+        ]"
+        @click.stop.prevent="changeMenu(menu.link)">
+        <div class="icon font-2md">
+          <svg-icon :name="menu.icon"/>
         </div>
-        <div class="text">
-          {{ menu.label }}
+        <div class="text capitalize font-2md">
+          {{ $t('label.' + menu.label) }}
         </div>
       </a>
     </div>

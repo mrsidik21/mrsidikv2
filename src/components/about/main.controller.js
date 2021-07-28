@@ -4,7 +4,6 @@ export default {
   data() {
     return {
       profiles: this.$store.getters.profiles,
-      language: this.$store.getters.language,
       loading: true,
     }
   },
@@ -17,15 +16,12 @@ export default {
     },
     isMobile() {
       return this.$parent.$parent.$refs.navigation.activeMobile || window.innerWidth <= 768
+    },
+    language() {
+      return this.$store.getters.language
     }
   },
   watch: {
-    language: {
-      handler(val) {
-        this.language = val
-      },
-      immediate: true
-    },
     isTagMy: {
       async handler(val) {
         if (!this.$store.getters.loadedSection.about) {

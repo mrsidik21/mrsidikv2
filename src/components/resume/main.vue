@@ -1,18 +1,20 @@
 <template>
-  <div
-    :class="[
-      'container relative z-1 fade-animate-bottom',
-      { 'is-active': !loading }
-    ]">
-    <div class="section-title mb-56">
-      <h2 :id="$t('label.resume')">{{ $t('label.resume') }}</h2>
-      <p>
-        {{ $t('resume.summary') }}
-      </p>
-    </div>
+  <div class="text-center text">
+    <h2 class="section-title text font-2lg uppercase">
+      {{ $t('label.resume') }}
+      <div class="line-title" />
+    </h2>
+    <p class="text font-md my-lg">
+      {{ $t('resume.summary') }}
+    </p>
 
-    <h3> {{ $t('label.skills') }} </h3>
-    <div class="row text-left mb-56">
+
+    <h2 class="section-title text font-2lg uppercase mt-xl mb-lg">
+      {{ $t('label.skills') }}
+      <div class="line-title" />
+    </h2>
+
+    <div class="row text-left mb-lg">
       <div
         v-for="(skill, n) in profiles.skills"
         :key="'sk' + n"
@@ -34,7 +36,9 @@
       </div>
     </div>
 
-    <h3> {{ $t('label.experience') }} </h3>
+    <h3 class="text uppercase text-left pt-md mb-lg">
+      {{ $t('label.experience') }}
+    </h3>
     <div class="row text-left">
       <div
         v-for="(experience, n) in profiles.experience"
@@ -61,7 +65,9 @@
 
     <div class="row text-left">
       <div class="col">
-        <h3>{{ $t('label.education') }}</h3>
+        <h3 class="text uppercase text-left pt-md mb-lg">
+          {{ $t('label.experience') }}
+        </h3>
         <div
           v-for="(education, n) in profiles.education"
           :key="n"

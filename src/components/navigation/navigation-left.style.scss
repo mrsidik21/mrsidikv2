@@ -39,26 +39,40 @@
     display: none;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-    margin-left: 16px;
+    margin-left: 12px;
   }
   &:hover {
     background: $primary;
     color: $white;
     text-align: left;
-    max-width: 100px;
+    min-width: 100px;
+    max-width: 200px;
     .text {
+      color: $white;
       opacity: 1;
       display: inline-block;
+    }
+  }
+  &.is-active {
+    background: $primary;
+    color: $white;
+    .text {
+      color: $white !important;
     }
   }
 }
 @media screen and (max-width: 768px) {
   .navigation-left {
     left: -100%;
+    width: 200px;
     &.is-active {
       left: 0;
+      border-right: 1px solid #E0E0E0;
     }
     background: #FFF;
+    .menu {
+      width: 100%;
+    }
     .menu-item {
       text-align: left !important;
       max-width: unset !important;

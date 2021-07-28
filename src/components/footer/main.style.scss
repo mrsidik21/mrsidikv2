@@ -1,29 +1,3 @@
-.container {
-  padding: 0 15px 60px;
-  width: calc(100% - 30px);
-}
-.z-1 {
-  z-index: 1;
-}
-.relative {
-  position: relative;
-}
-h3 {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  font-family: 'Poppins', sans-serif;
-  padding: 0;
-  margin: 0 0 15px 0;
-  color: #45505b;
-}
-p {
-  font-size: 14px;
-  color: #45505b;
-  margin: 0 0 40px 0;
-  padding: 0;
-  font-style: italic;
-}
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
@@ -33,10 +7,6 @@ p {
 .slide-fade-enter, .slide-fade-leave-to {
   transform: translateY(-10px);
   opacity: 0;
-}
-.mt-56 {
-  // margin: 48px 0 0 0;
-  padding: 48px 0 24px 0;
 }
 .social-links {
   margin: 0 0 40px 0;
@@ -77,10 +47,4 @@ p {
 img {
   max-width: 100%;
   height: auto;
-}
-@media screen and (max-width: 768px) {
-  .container {
-    width: auto;
-    text-align: center;
-  }
 }

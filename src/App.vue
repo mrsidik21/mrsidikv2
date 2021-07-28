@@ -4,7 +4,11 @@
 
     <navigation-left :active="menuActive"/>
 
-    <div class="content in-one">
+    <div
+      id="content"
+      :class="[
+        { 'in-one': isOne }
+      ]">
       <router-view/>
     </div>
   </div>
@@ -21,13 +25,29 @@ export default {
   },
   data() {
     return {
-      menuActive: false
+      menuActive: false,
+      timer: null
     }
+  },
+  computed: {
+    isOne() {
+      return this.$route.hash === '#hero' || this.$route.hash === ''
+    },
+    offsetTopSection() {
+      return this.offsets
+    }
+  },
+  destroyed() {
+    document.querySelector('#content').removeEventListener('scroll', this.handleScroll)
+  },
+  async mounted() {
+    document.querySelector('#content').addEventListener('scroll', this.handleScroll)
   },
   methods: {
     showingMenu(active) {
-      console.log(document.getElementsByClassName('navigation-top'))
       this.menuActive = active
+    },
+    handleScroll() {
     }
   }
 }

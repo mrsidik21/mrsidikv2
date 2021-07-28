@@ -1,11 +1,8 @@
 <template>
-  <div
-    :class="[
-      'container relative z-1 fade-animate-bottom',
-      { 'is-active': !loading }
-    ]">
-    <div class="section-title mt-56">
-      <h2 :id="$t('label.contact')">{{ $t('label.contact') }}</h2>
+  <div class="text-center text">
+    <div class="section-title mb-xl">
+      <h2 class="font-2lg text uppercase">{{ $t('label.contact') }}</h2>
+      <div class="line-title" />
     </div>
 
     
@@ -21,14 +18,14 @@
               :oncontextmenu="contact.link === '' ? false : true"
               :title="contact.name[language]"
               @click.stop.prevent="goTo(contact)">
-              <svg-icon :icon-class="contact.icon"/>
+              <svg-icon :name="contact.icon"/>
             </a>
           </div>
           <div class="text-left">
-            <h4 class="capitalize">
+            <h4 class="capitalize font-lg">
               {{ contact.name[language] }}
             </h4>
-            <p>
+            <p class="font-md">
               {{ contact.desc[language] }}
             </p>
           </div>
@@ -36,7 +33,7 @@
       </div>
       <div class="col flex-1 row keep-flex justify-center items-center">
         <div class="py-2md">
-          <img src="/static/img/sidik about.jpeg" width="320" />
+          <img src="/img/sidik about.jpeg" width="320" />
         </div>
       </div>
     </div>

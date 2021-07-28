@@ -1,12 +1,9 @@
 <template>
-  <div
-    :class="[
-      'container relative z-1 fade-animate-bottom',
-      { 'is-active': !loading }
-    ]">
-    <div class="section-title mb-56">
-      <h2 :id="$t('label.portofolio')">{{ $t('label.portofolio') }}</h2>
-    </div>
+  <div class="text-center">
+    <h2 class="text uppercase font-lg section-title mb-lg">
+      {{ $t('label.portofolio') }}
+      <div class="line-title" />
+    </h2>
 
     <div class="row">
       <div class="col">
@@ -30,7 +27,7 @@
           :key="'port' + n"
           :class="{ 'is-hidden': !portofolio.active }"
           class="col lg-3 portofolio my-8">
-          <img :src="'/static/img/' + portofolio.img" class="img-fluid" alt="">
+          <img :src="'/img/' + portofolio.img" class="img-fluid" alt="">
           <div class="portofolio-wrap">
             <div class="portofolio-info">
               <div class="portofolio-name">

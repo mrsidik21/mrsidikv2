@@ -20,5 +20,19 @@ export default {
       showMenu: false,
       menus: Menus
     }
+  },
+  computed: {
+    menuActive() {
+      if (!this.$route.hash) return '#hero'
+      return this.$route.hash
+    }
+  },
+  methods: {
+    changeMenu(e) {
+      if (this.$route.hash === e) return;
+      this.$router.push({
+        hash: e
+      })
+    }
   }
 }

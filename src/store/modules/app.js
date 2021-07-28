@@ -1,5 +1,6 @@
 import { Menus } from '@/utils/menus'
 import { Profiles } from '@/utils/profiles'
+import i18n from '@/lang'
 const app = {
   state: {
     language: localStorage.language ? localStorage.language : 'en',
@@ -17,6 +18,7 @@ const app = {
     SET_LANGUAGE: (state, language) => {
       state.language = language
       localStorage.language = language
+      i18n.locale = language
     },
     SET_MENUS: (state, menus) => {
       state.menus = menus

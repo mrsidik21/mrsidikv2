@@ -6,7 +6,7 @@
       <div class="modal-header">Portofolio Detail</div>
       <div class="modal-closer">
         <button @click="closingModal">
-          <svg-icon icon-class="close"/>
+          <svg-icon name="close"/>
         </button>
       </div>
 
@@ -16,14 +16,14 @@
             v-if="isAnyToPrev"
             class="modal-trigger-slide prev"
             @click="prevSlide">
-            <svg-icon icon-class="right-arrow"/>
+            <svg-icon name="right-arrow"/>
           </div>
 
           <div
             v-if="isAnyToNext"
             class="modal-trigger-slide next"
             @click="nextSlide">
-            <svg-icon icon-class="right-arrow"/>
+            <svg-icon name="right-arrow"/>
           </div>
 
           <transition name="slide-fade">
@@ -33,7 +33,7 @@
               <div class="title">
                 <h3>{{ detail.name }}</h3>
               </div>
-              <img v-for="(photo, n) in detail.photos" :key="n" :src="'/static/img/' + photo">
+              <img v-for="(photo, n) in detail.photos" :key="n" :src="'/img/' + photo">
             </div>
           </transition>
         </div>

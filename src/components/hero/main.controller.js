@@ -3,7 +3,6 @@ export default {
   data() {
     return {
       profiles: this.$store.getters.profiles,
-      language: this.$store.getters.language,
       typer: '',
       timer: null,
       delayTimer: 500,
@@ -12,17 +11,20 @@ export default {
     }
   },
   computed: {
-    idElement() {
-      return 'muhammadrahmatsidik'
+    language() {
+      if (this.$store.getters.language) {
+        return this.$store.getters.language
+      }
+      return 'en'
     },
     wordOne() {
       const text = this.$t('greeting.profession')
       if (!text) return ''
       let newText = ''
       if (this.language === 'en') {
-        newText = text.substring(0, 6)
+        newText = text.replace('Accountant', '')
       } else {
-        newText = text.substring(0, 12)
+        newText = text.replace('Akuntan', '')
       }
       return newText
     },
@@ -31,9 +33,9 @@ export default {
       if (!text) return ''
       let newText = ''
       if (this.language === 'en') {
-        newText = text.substring(6, text.length)
+        newText = text.replace('I\'m a', '')
       } else {
-        newText = text.substring(13, text.length)
+        newText = text.replace('Saya seorang', '')
       }
       return newText
     },
@@ -53,6 +55,10 @@ export default {
         }
       },
       immediate: true
+    },
+    language() {
+      this.activeBlink = false
+      this.printer()
     },
     isTagMy: {
       async handler(val) {

@@ -1,25 +1,24 @@
 <template>
-  <div
-    :class="[
-      'container relative z-1 fade-animate-bottom',
-      { 'is-active': !loading }
-    ]">
-    <div class="section-title mt-56">
-      <h2 id="titleAbout">{{ $t('label.about') }}</h2>
-      <p>{{ $t('about.title_description') }}</p>
-    </div>
+  <div class="text-center">
+    <h2 class="section-title text font-2lg uppercase">
+      {{ $t('label.about') }}
+      <div class="line-title" />
+    </h2>
+    <p class="text font-md my-lg">
+      {{ $t('about.title_description') }}
+    </p>
 
-    <div class="row">
-      <div class="col max-w-320">
-        <!--<img src="/static/img/Web Projek Photo Resume.jpg" class="img-fluids" />-->
+    <div class="flex pt-md">
+      <div class="p-md">
+        <img src="/img/Web Projek Photo Resume.jpg" />
       </div>
-      <div class="col text-left">
-        <h3>{{ $t('degree.name') }}</h3>
-        <div class="flex mt-56">
-          <ul>
+      <div>
+        <h3 class="mb-sm text-left p-md">{{ $t('degree.name') }}</h3>
+        <div class="flex text-left">
+          <ul class="p-md">
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.birthday') }}:
@@ -30,7 +29,7 @@
             </li>
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.city') }}:
@@ -41,7 +40,7 @@
             </li>
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.age') }}:
@@ -52,7 +51,7 @@
             </li>
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.degree') }}:
@@ -62,10 +61,11 @@
               </span>
             </li>
           </ul>
-          <ul>
+
+          <ul class="p-md">
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.weight') }}:
@@ -76,7 +76,7 @@
             </li>
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.height') }}:
@@ -87,7 +87,7 @@
             </li>
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.marital') }}:
@@ -98,7 +98,7 @@
             </li>
             <li>
               <i class="icon">
-                <svg-icon icon-class="right-arrow"/>
+                <svg-icon name="right-arrow"/>
               </i>
               <span class="title capitalize">
                 {{ $t('label.gender') }}:
