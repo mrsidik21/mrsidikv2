@@ -6,9 +6,23 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home
+    path: '',
+    component: {
+      render(c) {
+        return c('router-view')
+      }
+    },
+    meta: {
+      guest: true
+    },
+    redirect: '/',
+    children: [
+      {
+        path: '',
+        name: 'home',
+        component: Home
+      }
+    ]
   }
 ]
 
