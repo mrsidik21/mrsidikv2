@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ? '/mrsidikv2/' : '/',
   pluginOptions: {
     i18n: {
       locale: 'en',
