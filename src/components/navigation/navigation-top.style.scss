@@ -1,0 +1,71 @@
+@import '@/assets/variable.scss';
+.navigation-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px;
+  z-index: 1;
+}
+.navigation-language {
+  position: relative;
+  cursor: pointer;
+  &:focus {
+    .navigation-dropdown {
+      display: block;
+    }
+  }
+}
+.navigation-dropdown {
+  position: absolute;
+  top: calc(100% + 0px);
+  right: 4px;
+  height: 0;
+  width: 150px;
+  overflow: hidden;
+  opacity: 0;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 2px 6px 12px rgba(0, 0, 0, .12);
+  transition: height .2s ease, opacity .3s ease-in-out .1s;
+  &.is-active {
+    opacity: 1;
+    height: auto;
+    max-height: 300px;
+    border: 1px solid #E0E0E0;
+    overflow: hidden auto;
+  }
+}
+.navigation-dropdown-item {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .icon {
+    margin-right: 8px;
+  }
+  transition: all .3s ease-in-out;
+  &:hover {
+    color: $primary;
+  }
+  &.is-active {
+    color: #FFF;
+    opacity: .8;
+    background-color: $primary;
+  }
+}
+.navigation-toggle,
+.navigation-language {
+  padding: 4px;
+}
+.navigation-toggle {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navigation-toggle {
+    display: block;
+  }
+}
