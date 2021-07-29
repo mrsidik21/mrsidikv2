@@ -2,7 +2,7 @@
 .navigation-top {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 16px;
   left: 0;
   display: flex;
   justify-content: flex-end;
@@ -67,7 +67,7 @@
 @media screen and (max-width: 768px) {
   .navigation-top {
     background-color: #FFF;
-    right: 8px;
+    right: 0px;
   }
   .navigation-toggle {
     display: block;

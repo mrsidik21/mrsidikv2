@@ -10,7 +10,7 @@
 
     <div class="flex pt-md">
       <div class="p-md">
-        <img src="/img/Web Projek Photo Resume.jpg" />
+        <img src="@/assets/img/Web Projek Photo Resume.jpg" />
       </div>
       <div>
         <h3 class="mb-sm text-left p-md">{{ $t('degree.name') }}</h3>

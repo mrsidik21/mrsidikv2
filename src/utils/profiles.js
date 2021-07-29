@@ -180,7 +180,7 @@ export const Profiles = {
       name: 'Teknisi Akuntansi Pelaksana',
       publisher: 'Politeknik Piksi Ganesha',
       date: 'Okt 2015',
-      img: '1.Pelaksana_001.jpg',
+      img: '/img/1.Pelaksana_001.jpg',
       photos: ['1.Pelaksana_001.jpg', '1.Pelaksana_002.jpg'],
       type: 1,
       active: true
@@ -189,7 +189,7 @@ export const Profiles = {
       name: 'Teknisi Akuntansi Menengah',
       publisher: 'Politeknik Piksi Ganesha',
       date: 'Okt 2016',
-      img: '2.Menengah_001.jpg',
+      img: '/img/2.Menengah_001.jpg',
       photos: ['2.Menengah_001.jpg', '2.Menengah_002.jpg'],
       type: 1,
       active: true
@@ -198,7 +198,7 @@ export const Profiles = {
       name: 'Teknisi Akuntansi Lanjutan',
       publisher: 'Politeknik Piksi Ganesha',
       date: 'Okt 2017',
-      img: '3.Lanjutan_001.jpg',
+      img: '/img/3.Lanjutan_001.jpg',
       photos: ['3.Lanjutan_001.jpg', '3.Lanjutan_002.jpg'],
       type: 1,
       active: true
@@ -207,7 +207,7 @@ export const Profiles = {
       name: 'Excle Dasar untuk Administrasi',
       publisher: 'Kormo Jobs Indonesia',
       date: 'Mar 2021',
-      img: 'sertifikat excle_001.jpg',
+      img: '/img/sertifikat excle_001.jpg',
       photos: ['sertifikat excle_001.jpg'],
       type: 3,
       active: true
@@ -216,7 +216,7 @@ export const Profiles = {
       name: 'Mengenal Prinsip Dasar Akuntansi',
       publisher: 'Kormo Jobs Indonesia',
       date: 'Mar 2021',
-      img: 'sertifikat akuntansi_001.jpg',
+      img: '/img/sertifikat akuntansi_001.jpg',
       photos: ['sertifikat akuntansi_001.jpg'],
       type: 3,
       active: true
@@ -241,7 +241,7 @@ export const Profiles = {
       name: 'Brevet Pajak A&B',
       publisher: 'Ikatan Akuntansi Indonesia (IAI)',
       date: 'Mar 2021',
-      img: 'Scan Brevet_001.jpg',
+      img: '/img/Scan Brevet_001.jpg',
       photos: ['Scan Brevet_001.jpg', 'Scan Brevet_002.jpg'],
       type: 2,
       active: true

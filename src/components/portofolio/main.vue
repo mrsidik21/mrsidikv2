@@ -27,7 +27,7 @@
           :key="'port' + n"
           :class="{ 'is-hidden': !portofolio.active }"
           class="col lg-3 portofolio my-8">
-          <img :src="'/img/' + portofolio.img" class="img-fluid" alt="">
+          <img :src="portofolio.img" class="img-fluid" alt="">
           <div class="portofolio-wrap">
             <div class="portofolio-info">
               <div class="portofolio-name">
