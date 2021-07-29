@@ -9,7 +9,18 @@
       :class="[
         { 'in-one': isOne }
       ]">
-      <router-view/>
+      <div>
+        <sidik-loading :loading="loading" />
+        <sidik-gallery ref="gallery" />
+        <section id="hero"><sidik-hero /></section>
+        <section id="about"><sidik-about /></section>
+        <section id="resume"><sidik-resume /></section>
+        <section id="portofolio"><sidik-portofolio @view="showingGallery"/></section>
+        <section id="contact"><sidik-contact /></section>
+        <footer>
+          <sidik-footer/>
+        </footer>
+      </div>
     </div>
   </div>
 </template>
@@ -26,7 +37,8 @@ export default {
   data() {
     return {
       menuActive: false,
-      timer: null
+      timer: null,
+      loading: false
     }
   },
   computed: {
@@ -35,6 +47,17 @@ export default {
     },
     offsetTopSection() {
       return this.offsets
+    }
+  },
+  watch: {
+    $route: {
+      handler(to) {
+        let text = 'hero'
+        if (to.hash) text = to.hash.replace('#', '')
+        let defaultTop = document.getElementById(text).offsetTop
+        if (text === 'hero') defaultTop = 0
+        document.getElementById('content').scrollTo(0, defaultTop)
+      }
     }
   },
   destroyed() {
@@ -48,6 +71,9 @@ export default {
       this.menuActive = active
     },
     handleScroll() {
+    },
+    async showingGallery(data) {
+      this.$refs.gallery.showingModal(data)
     }
   }
 }
